@@ -1,0 +1,47 @@
+node_modules/
+dist/
+dist-electron/
+release/
+.vite/
+coverage/
+*.log
+
+# Local credentials and agent runtime state
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+auth.json
+auth.json.*
+**/auth.json
+**/auth.json.*
+*.pem
+*.p12
+*.pfx
+*.key
+**/backups/
+**/run-profiles/
+.codex/
+.claude/
+.grok/
+.gemini/
+
+# Local databases, session history, and generated state
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.jsonl
+*.bak
+*.bak.*
+
+# Design/research material kept local for now
+AGENT_SWITCH_SPEC.md
+ELECTRON_APP_DESIGN.md
+AGENT_*_RESEARCH.md
+CONTEXT.md
+docs/
+prototype-refs/
+src/prototype/

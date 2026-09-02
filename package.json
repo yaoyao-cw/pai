@@ -1,0 +1,66 @@
+{
+  "name": "pai-switch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "description": "Desktop account and route manager for coding agents",
+  "scripts": {
+    "dev": "vite",
+    "dev:inspect": "PAI_SWITCH_CDP_PORT=9333 vite",
+    "build": "vite build && electron-builder --dir",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "smol-toml": "1.8.0",
+    "undici": "7.16.0",
+    "zod": "3.24.1",
+    "zustand": "5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "@vitejs/plugin-react": "4.3.4",
+    "electron": "36.8.1",
+    "electron-builder": "26.0.12",
+    "jsdom": "25.0.1",
+    "tailwindcss": "4.0.9",
+    "typescript": "5.7.3",
+    "vite": "6.1.0",
+    "vite-plugin-electron": "1.1.1",
+    "vitest": "3.0.8"
+  },
+  "build": {
+    "appId": "com.pai.switch",
+    "productName": "pai-switch",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "dist-electron/**",
+      "package.json"
+    ],
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  },
+  "packageManager": "pnpm@10.30.2+sha512.36cdc707e7b7940a988c9c1ecf88d084f8514b5c3f085f53a2e244c2921d3b2545bc20dd4ebe1fc245feec463bb298aecea7a63ed1f7680b877dc6379d8d0cb4",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "esbuild"
+    ]
+  }
+}
